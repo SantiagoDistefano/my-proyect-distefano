@@ -1,0 +1,29 @@
+
+.highNav {
+  overflow: hidden;
+  background-color: rgb(218, 136, 136);
+  height: 48px;
+  padding: 7px;  
+}
+
+.highNav a {
+  float: right;
+  color: aqua;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.highNav a:hover {
+  background-color: rgb(204, 229, 250);
+  color: black;
+  
+}
+
+.highNav a.active {
+  background-color: darkgray;
+  color: white;
+}
+
+
