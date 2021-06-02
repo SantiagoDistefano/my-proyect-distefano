@@ -1,14 +1,13 @@
-
 .highNav {
   overflow: hidden;
-  background-color: rgb(218, 136, 136);
+  background-color: rgb(153, 245, 202);
   height: 48px;
-  padding: 7px;  
+  padding: 7px;
 }
 
 .highNav a {
   float: right;
-  color: aqua;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -18,7 +17,6 @@
 .highNav a:hover {
   background-color: rgb(204, 229, 250);
   color: black;
-  
 }
 
 .highNav a.active {
@@ -27,3 +25,12 @@
 }
 
 
+img {
+  float: right;
+  padding: 9px;
+}
+
+h3 {
+  margin: 0;
+  padding: 12px;
+}
