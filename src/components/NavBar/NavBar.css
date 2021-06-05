@@ -1,7 +1,7 @@
 .highNav {
   overflow: hidden;
   background-color: rgb(153, 245, 202);
-  height: 48px;
+  height: 55px;
   padding: 7px;
 }
 
@@ -9,13 +9,13 @@
   float: right;
   color: black;
   text-align: center;
-  padding: 14px 16px;
+  padding: 8px 16px;
   text-decoration: none;
   font-size: 18px;
 }
 
 .highNav a:hover {
-  background-color: rgb(204, 229, 250);
+  background-color: rgb(104, 161, 175);
   color: black;
 }
 
@@ -24,13 +24,14 @@
   color: white;
 }
 
-
-img {
-  float: right;
-  padding: 9px;
-}
-
-h3 {
+.nombreTienda {
   margin: 0;
   padding: 12px;
+  font-size: 20px;
+  float: left;
+}
+
+.cart{
+  float: right;
+  padding: 5px;
 }
