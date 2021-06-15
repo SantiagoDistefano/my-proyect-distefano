@@ -1,0 +1,12 @@
+.lista {
+    list-style-type: none;
+    margin-top: 5px;
+    padding: 16px 14px;
+    background-color: cyan;
+    padding-left: 13px;
+    
+}
+
+.info {
+    padding-left: 50px;
+}

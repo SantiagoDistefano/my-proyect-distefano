@@ -1,4 +1,5 @@
 import ItemCount from "../ItemCount/ItemCount";
+import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
 
 const ItemListContainer = ({ greeting }) => {
@@ -10,9 +11,8 @@ const ItemListContainer = ({ greeting }) => {
   
   return (
     <div className="info">
-      <h3 className="texto">Este texto se reemplazara por el catalogo</h3>
+      <ItemList/>
       <ItemCount initial={0} stock={10} onAdd={onAdd} />
-
     </div>
   );
 };

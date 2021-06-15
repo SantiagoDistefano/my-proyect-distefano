@@ -9,5 +9,5 @@ function Main() {
       <ItemListContainer />
     </div>
   );
-}
+};
 export default Main;
