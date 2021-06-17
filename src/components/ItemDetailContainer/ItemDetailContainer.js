@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Item from '../Item/Item';
+import Item from "../Item/Item";
 import ItemDetail from "../ItemDetail/ItemDetail";
 
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({item}) => {
     
     const [items , setItems] = useState([])
     
@@ -20,6 +20,6 @@ const ItemDetailContainer = () => {
             <ItemDetail/>
         </div>
     )
-}
+};
 
 export default ItemDetailContainer;

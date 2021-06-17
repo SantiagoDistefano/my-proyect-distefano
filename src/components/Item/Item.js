@@ -6,12 +6,10 @@ const Item = ({item}) => {
     
     return (
         <div>
-            <ul className= "lista">
-                <li className ="img"></li>
-                <li className ="info">Id:</li>
-                <li className ="info">Title:</li>
-                <li className ="info">Price:</li>
-            </ul>
+            <h3>Peluche pulpo</h3>
+            <p>Peluche reversible, enojado o feliz </p>
+            <img src="https://i.blogs.es/e2feea/pulpito/450_1000.jpg" alt="detail"></img>
+            <p>su precio es de: $1000</p>
         </div>
     );
 };
