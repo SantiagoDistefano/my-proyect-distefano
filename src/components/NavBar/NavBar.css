@@ -6,7 +6,7 @@
 }
 
 .highNav a {
-  float: right;
+  float: left;
   color: black;
   text-align: center;
   padding: 8px 16px;
@@ -14,10 +14,6 @@
   font-size: 18px;
 }
 
-.highNav a:hover {
-  background-color: rgb(104, 161, 175);
-  color: black;
-}
 
 .highNav a.active {
   background-color: darkgray;
@@ -26,12 +22,23 @@
 
 .nombreTienda {
   margin: 0;
-  padding: 12px;
+  padding: 5px;
   font-size: 20px;
-  float: left;
+  float: right;
 }
 
 .cart{
-  float: right;
+  float: left;
   padding: 5px;
+}
+
+.Mark{
+  background-color: darkcyan;
+}
+
+.brand {
+  margin: 0;
+  padding: 10px;
+  font-size: 20px;
+  float: right;
 }

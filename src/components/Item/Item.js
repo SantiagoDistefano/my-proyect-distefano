@@ -1,17 +1,26 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
+import ItemCount from '../ItemCount/ItemCount';
 import "./Item.css"
 
 
-const Item = ({item}) => {
-    
+const Item = (props) => {
+
+    const onAdd = (e,count)=>{
+        alert(`Has agregado ${count} al carrito`);
+        count = 1;
+    };
     return (
-        <div>
-            <h3>Peluche pulpo</h3>
-            <p>Peluche reversible, enojado o feliz </p>
-            <img src="https://i.blogs.es/e2feea/pulpito/450_1000.jpg" alt="detail"></img>
-            <p>su precio es de: $1000</p>
+        <div className="info">
+            <h4>{props.name}</h4>
+            <Link to={`/item/${props.id}`}>
+                <img class="img-item" src={props.URL} alt="img-item"/>
+            </Link>
+            <p>{props.price}</p>
+            <ItemCount stock={10} initial={1} onAdd={onAdd}/>
         </div>
     );
 };
 
 export default Item
+
