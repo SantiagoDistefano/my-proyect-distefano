@@ -12,7 +12,7 @@ const [comprarCantidad, setComprarCantidad] = useState(0);
   };
 
   return (
-    <div>
+    <div className="contenedor">
       <h3>{item.name}</h3>
       <img src={item.URL} alt="img-detail" />
       <p>{item.description}</p>
@@ -22,7 +22,7 @@ const [comprarCantidad, setComprarCantidad] = useState(0);
         <ItemCount stock={10} initial={0} onAdd={onAdd} />
       ) : (
         <Link to="/cart">
-          <button className="">Terminar compra</button>
+          <button className="AddCart">Terminar compra</button>
         </Link>
       )}
     </div>

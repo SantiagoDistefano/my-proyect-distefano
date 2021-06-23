@@ -1,0 +1,11 @@
+.AddCart {
+    background-color: white;
+    border-color: rgba(0, 140, 255, 0.87);
+    margin-top: 12px;
+    text-decoration: none;
+    color: black;
+}
+
+.contenedor {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}

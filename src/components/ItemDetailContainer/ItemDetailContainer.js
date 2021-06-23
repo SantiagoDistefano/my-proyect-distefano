@@ -15,10 +15,24 @@ const ItemDetailContainer = () => {
     },
     {
       URL: "https://www.xenex.uy/imgs/productos/productos31_9000.jpg",
-      name: "Peluche atigrado ",
+      name: "Peluche jirafa ",
       id: "2",
-      description: "Oso atigrado naranja ",
+      description: "peluche oso con disfraz de jirafa ",
       price: "$500",
+    },
+    {
+      URL: "https://www.xenex.uy/imgs/productos/productos31_8998.jpg",
+      name: "Oso cerdito",
+      id: "3",
+      description: "peluche oso con disfraz de cerdito ",
+      price: "$550",
+    },
+    {
+      URL: "https://www.xenex.uy/imgs/productos/productos31_8999.jpg",
+      name: "Oso vaca",
+      id: "4",
+      description: "peluche oso con disfraz de vaca ",
+      price: "$600",
     },
   ];
 
