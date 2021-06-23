@@ -17,7 +17,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
   return (
     <div>
       <div>
-      <button className="icon1">
+      <button className="icon">
           <img
             src="https://img.icons8.com/officexs/16/000000/minus-math.png"
             alt="icon1"
@@ -25,7 +25,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
           />
         </button>
         <span className="items"> {items} </span>
-        <button className="icon2">
+        <button className="icon">
           <img
             src="https://img.icons8.com/officexs/16/000000/plus-math.png"
             alt="icon2"
@@ -33,7 +33,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
           />
         </button>
       </div>
-      <button onClick={() => onAdd(items)} className="AddCart">Agregar al carrito</button>
+      <button type="button" className="AddCart" onClick={x => onAdd(x,items)}>Agregar al Carrito</button>
     </div>
   );
 };

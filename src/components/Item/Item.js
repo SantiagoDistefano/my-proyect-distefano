@@ -6,18 +6,19 @@ import "./Item.css"
 
 const Item = (props) => {
 
-    const onAdd = (e,count)=>{
-        alert(`Has agregado ${count} al carrito`);
-        count = 1;
+    const onAdd = (e,items)=>{
+        alert(`Has agregado ${items} items al carrito`);
+        items = 1;
     };
     return (
         <div className="info">
-            <h4>{props.name}</h4>
             <Link to={`/item/${props.id}`}>
                 <img class="img-item" src={props.URL} alt="img-item"/>
             </Link>
+            <h4>{props.name}</h4>
             <p>{props.price}</p>
-            <ItemCount stock={10} initial={1} onAdd={onAdd}/>
+            <ItemCount stock={10} initial={0} onAdd={onAdd}/>
+            
         </div>
     );
 };

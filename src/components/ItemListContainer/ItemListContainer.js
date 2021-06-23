@@ -42,7 +42,7 @@ const ItemListContainer = () => {
           },
         ]
         );
-      }, 2000);
+      }, 1500);
     })
     .then(res =>
       ((category === "all") || (category === undefined)) ? setItems(res) : setItems(res.filter(item => item.category === category))
