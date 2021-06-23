@@ -7,14 +7,14 @@ const ItemList = (props) => {
 
   return (
     <div>
-        {props.items.map( (y,index) =>(
+        {props.items.map( (element ,e) =>(
             <Item
-            key = {index}
-            id = {y.id}
-            URL = {y.URL}
-            name = {y.name}
-            price ={y.price}
-            description ={y.description}
+            key = {e}
+            id = {element.id}
+            URL = {element.URL}
+            name = {element.name}
+            price ={element.price}
+            description ={element.description}
             
             />
         ))}

@@ -39,13 +39,3 @@ const ItemCount = ({ initial, stock, onAdd }) => {
 };
 
 export default ItemCount;
-
-
-
-
-
-
-
-
-
-

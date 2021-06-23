@@ -12,6 +12,7 @@ const NavBar = () => {
         Detalle
       </NavLink>
 
+      
       <CartWidget />
 
       <h3 className="nombreTienda">
