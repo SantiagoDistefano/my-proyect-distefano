@@ -18,6 +18,7 @@ const ItemListContainer = () => {
             id: "1",
             description: "Oso marron con bufanda ",
             price: "$500",
+            category : "osos"
           },
           {
             URL: "https://www.xenex.uy/imgs/productos/productos31_9000.jpg",
@@ -25,6 +26,7 @@ const ItemListContainer = () => {
             id: "2",
             description: "peluche oso co disfraz de jirafa ",
             price: "$500",
+            category: "osos"
           },
           {
             URL: "https://www.xenex.uy/imgs/productos/productos31_8998.jpg",
@@ -32,6 +34,7 @@ const ItemListContainer = () => {
             id: "3",
             description: "peluche oso con disfraz de cerdito ",
             price: "$550",
+            category : "osos"
           },
           {
             URL: "https://www.xenex.uy/imgs/productos/productos31_8999.jpg",
@@ -39,6 +42,23 @@ const ItemListContainer = () => {
             id: "4",
             description: "peluche oso con disfraz de vaca ",
             price: "$600",
+            category : "osos"
+          },
+          {
+            URL: "https://www.xenex.uy/imgs/productos/productos31_8996.jpg",
+            name: "Peluche perro ",
+            id: "5",
+            description: "perro english springer",
+            price: "$700",
+            category: "perros"
+          },
+          {
+            URL: "https://www.xenex.uy/imgs/productos/productos31_9003.jpg",
+            name: "Perro golden ",
+            id: "6",
+            description: "perro english springer",
+            price: "$700",
+            category: "perros"
           },
         ]
         );

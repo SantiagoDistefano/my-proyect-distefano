@@ -6,7 +6,7 @@
 }
 
 .highNav a {
-  float: left;
+  float: right;
   color: black;
   text-align: center;
   padding: 8px 16px;
@@ -24,21 +24,20 @@
   margin: 0;
   padding: 5px;
   font-size: 20px;
-  float: right;
+  float: left;
 }
 
 .cart{
-  float: left;
+  float: right;
   padding: 5px;
 }
 
 .Mark{
   background-color: darkcyan;
+  float:  right;
 }
 
-.brand {
-  margin: 0;
-  padding: 10px;
-  font-size: 20px;
-  float: right;
+
+.link {
+  float:  right;
 }

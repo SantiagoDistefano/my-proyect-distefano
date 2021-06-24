@@ -25,14 +25,28 @@ const ItemDetailContainer = () => {
       name: "Oso cerdito",
       id: "3",
       description: "peluche oso con disfraz de cerdito ",
-      price: "$550",
+      price: "$500",
     },
     {
       URL: "https://www.xenex.uy/imgs/productos/productos31_8999.jpg",
       name: "Oso vaca",
       id: "4",
       description: "peluche oso con disfraz de vaca ",
-      price: "$600",
+      price: "$500",
+    },
+    {
+      URL: "https://www.xenex.uy/imgs/productos/productos31_8996.jpg",
+      name: "Perro english springer",
+      id: "5",
+      description: "Peluche perro english springer",
+      price: "$700",
+    },
+    {
+      URL: "https://www.xenex.uy/imgs/productos/productos31_9003.jpg",
+      name: "Perro golden ",
+      id: "6",
+      description: "perro english springer",
+      price: "$700",
     },
   ];
 

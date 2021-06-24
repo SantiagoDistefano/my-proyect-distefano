@@ -5,15 +5,22 @@ import "./NavBar.css";
 const NavBar = () => {
   return (
     <nav className="highNav">
-      <NavLink activeClassName="Mark" exact to={"/"}>
-        Home
-      </NavLink>
-      <NavLink activeClassName="Mark" exact to={"/item/1"}>
-        Detalle
-      </NavLink>
-
       
       <CartWidget />
+      
+      <NavLink activeClassName="Mark"  exact to={"/"}>
+        Home
+      </NavLink>
+      <NavLink activeClassName="Mark"  exact to={"/category/osos"}>
+        Osos
+      </NavLink>
+      <NavLink activeClassName="Mark"  exact to={"/category/perros"}>
+        Perros
+      </NavLink>
+
+
+      
+      
 
       <h3 className="nombreTienda">
         <Link to={"/"}> Peluchin</Link>
