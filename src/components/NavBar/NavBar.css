@@ -1,17 +1,19 @@
 .highNav {
   overflow: hidden;
-  background-color: rgb(153, 245, 202);
-  height: 55px;
+  background-color: rgb(218, 169, 97);
+  height: 70px;
   padding: 7px;
+  
 }
 
 .highNav a {
   float: right;
   color: black;
   text-align: center;
-  padding: 8px 16px;
+  padding: 11px 16px;
   text-decoration: none;
   font-size: 18px;
+  font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
 }
 
 
@@ -22,22 +24,21 @@
 
 .nombreTienda {
   margin: 0;
-  padding: 5px;
+  padding-block-start: 5px;
   font-size: 20px;
   float: left;
 }
+
 
 .cart{
   float: right;
   padding: 5px;
 }
-
 .Mark{
-  background-color: darkcyan;
+  background-color: rgb(156, 118, 60);
   float:  right;
 }
 
-
-.link {
-  float:  right;
+.Icon {
+  float: left;
 }

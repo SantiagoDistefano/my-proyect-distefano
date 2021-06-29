@@ -61,7 +61,7 @@ const ItemDetailContainer = () => {
     });
   }, [id]);
   return (
-    <div>
+    <div className="Detail">
       <ItemDetail item={item} />
     </div>
   );

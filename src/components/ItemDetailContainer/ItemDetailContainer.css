@@ -1,0 +1,15 @@
+.Detail {
+    margin-right: 400px;
+    margin-left: 400px;
+    margin-top: 30px;
+    align-items: center;
+    background-color: aquamarine;
+  }
+
+
+  .Detail:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  

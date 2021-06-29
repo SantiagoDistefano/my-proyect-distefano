@@ -1,43 +1,34 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./NavBar.css";
+import CartWidget from "../CartWidget/CartWidget";
 
 const NavBar = () => {
   return (
     <nav className="highNav">
-      
       <CartWidget />
-      
-      <NavLink activeClassName="Mark"  exact to={"/"}>
-        Home
-      </NavLink>
-      <NavLink activeClassName="Mark"  exact to={"/category/osos"}>
-        Osos
-      </NavLink>
-      <NavLink activeClassName="Mark"  exact to={"/category/perros"}>
-        Perros
-      </NavLink>
 
-
-      
-      
-
-      <h3 className="nombreTienda">
-        <Link to={"/"}> Peluchin</Link>
-      </h3>
+      <NavLink activeClassName="Mark" exact to={"/"}>
+        <h5>Home</h5>
+      </NavLink>
+      <NavLink activeClassName="Mark" exact to={"/category/osos"}>
+        <h5>Osos</h5>
+      </NavLink>
+      <NavLink activeClassName="Mark" exact to={"/category/perros"}>
+        <h5>Perros</h5>
+      </NavLink>
+      <img
+        src="https://i.ibb.co/ZzHfyQP/Icon.png"
+        className="Icon"
+        alt="Icon"
+      />
+      <div className="nombreTienda">
+        <Link to={"/"}>
+          <h4>Peluchin</h4>
+        </Link>
+      </div>
     </nav>
   );
 };
-class CartWidget extends React.Component {
-  render() {
-    return (
-      <img
-        className="cart"
-        src="https://img.icons8.com/windows/32/000000/add-shopping-cart.png"
-        alt="cart"
-      />
-    );
-  }
-}
 
 export default NavBar;

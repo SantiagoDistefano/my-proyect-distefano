@@ -13,13 +13,14 @@ const [comprarCantidad, setComprarCantidad] = useState(0);
 
   return (
     <div className="contenedor">
-      <h3>{item.name}</h3>
-      <img src={item.URL} alt="img-detail" />
-      <p>{item.description}</p>
-      <p>{item.price}</p>
-
+      <div className="Map">
+        <h1>{item.name}</h1>
+        <img src={item.URL} className="imgDetail" alt="img-detail" />
+        <p>{item.description}</p>
+        <p>{item.price}</p>
+      </div>
       {comprarCantidad === 0 ? (
-        <ItemCount stock={10} initial={0} onAdd={onAdd} />
+        <ItemCount stock={10} initial={1} onAdd={onAdd} />
       ) : (
         <Link to="/cart">
           <button className="AddCart">Terminar compra</button>
