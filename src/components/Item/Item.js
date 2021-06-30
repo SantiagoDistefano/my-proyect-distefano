@@ -1,15 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-// import ItemCount from '../ItemCount/ItemCount';
+
 import "./Item.css"
 
 
 const Item = (props) => {
-
-    // const onAdd = (e,items)=>{
-    //     alert(`Has agregado ${items} items al carrito`);
-    //     items = 1;
-    // };
+    
     return (
         <div className="info">
             <Link to={`/item/${props.id}`}>
@@ -17,7 +13,8 @@ const Item = (props) => {
             </Link>
             <h4>{props.name}</h4>
             <h5><b>{props.price}</b></h5>
-            <Link to="/cart"><button className="BotonCompra">Comprar</button></Link>
+            <br/>
+            <Link to="/cart" className="link" ><h6 className="addCart">Añadir al carrito</h6></Link>
             
         </div>
     );

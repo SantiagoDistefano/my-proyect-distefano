@@ -3,12 +3,14 @@
     float: left;
     align-content: center;
     padding: 30px;
+    padding-bottom: 0;
     font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
     background-color: white;
     margin: 15px;
     border: 10px;
     border-style: groove;
     border-color: rgba(196, 159, 104, 0.795);
+    
 }
 
 .info:hover {
@@ -18,9 +20,17 @@
 }
 
 
-.BotonCompra {
-    background-color: white;
-    border-color: rgba(0, 140, 255, 0.87);
-    text-decoration: none;
+.addCart {
+    background-color: rgba(196, 159, 104, 0.795);
     color: black;
+    margin-bottom: 6px;
+    font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
+    text-align: center;
+    padding: 16px 35px;
+    cursor: pointer;
+    
+}
+
+.link {
+    text-decoration: none;
 }
