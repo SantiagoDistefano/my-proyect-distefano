@@ -1,23 +1,21 @@
 import React, { useState } from "react";
-import	"./ItemCount.css"
+import "./ItemCount.css";
 
 const ItemCount = ({ initial, stock, onAdd }) => {
-  
-    const [items, setItems] = useState(initial);
+  const [items, setItems] = useState(initial);
 
-    const addItems = () => {
-      items < stock ? setItems(items + 1) : alert("no hay mas stock")
-    }
+  const addItems = () => {
+    items < stock ? setItems(items + 1) : alert("no hay mas stock");
+  };
 
-    const deleteItems = () => {
-      items > 0 &&
-        setItems(items - 1)
-    }
+  const deleteItems = () => {
+    items > 0 && setItems(items - 1);
+  };
 
   return (
     <div>
       <div>
-      <button className="icon">
+        <button className="icon">
           <img
             src="https://img.icons8.com/officexs/16/000000/minus-math.png"
             alt="icon1"
@@ -33,7 +31,13 @@ const ItemCount = ({ initial, stock, onAdd }) => {
           />
         </button>
       </div>
-      <button type="button" className="AddCart" onClick={x => onAdd(x,items)}>Agregar al Carrito</button>
+      <button
+        type="button"
+        className="AddCart"
+        onClick={(x) => onAdd(x, items)}
+      >
+        Agregar al Carrito
+      </button>
     </div>
   );
 };

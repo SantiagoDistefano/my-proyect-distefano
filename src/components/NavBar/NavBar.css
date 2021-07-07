@@ -1,7 +1,7 @@
 .highNav {
   overflow: hidden;
   background-color: rgb(218, 169, 97);
-  height: 70px;
+  height: 60px;
   padding: 7px;
   
 }
@@ -10,17 +10,17 @@
   float: right;
   color: black;
   text-align: center;
-  padding: 11px 16px;
+  padding: 1px 9px;
   text-decoration: none;
   font-size: 18px;
   font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
 }
 
 
-.highNav a.active {
+/* .highNav a.active {
   background-color: darkgray;
   color: white;
-}
+} */
 
 .nombreTienda {
   margin: 0;

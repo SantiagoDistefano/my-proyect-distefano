@@ -1,21 +1,26 @@
-import React, {useState} from "react";
-import { Link } from "react-router-dom";
-import "./ItemDetail.css";
-import ItemCount from "../ItemCount/ItemCount";
+  import  {React, useContext, useState } from 'react'
+import './ItemDetail.css'
+import ItemCount from '../ItemCount/ItemCount'
+import { Link } from 'react-router-dom';
+import CartContext from '../../Context/CartContext';
 
-const ItemDetail = ({ item }) => {
-  
-const [comprarCantidad, setComprarCantidad] = useState(0);
+const ItemDetail = ({item}) => {
+
+  const [comprarCantidad, setComprarCantidad] = useState(0);
+  const {addItem} = useContext(CartContext)
 
   const onAdd = (items) => {
     setComprarCantidad(items);
+    addItem(item, items)
   };
+
+  const context = useContext(CartContext);
 
   return (
     <div className="contenedor">
       <div className="Map">
         <h1>{item.name}</h1>
-        <img src={item.URL} className="imgDetail" alt="img-detail" />
+        <img src={item.imageURL} className="imgDetail" alt="img-detail" />
         <p>{item.description}</p>
         <p>{item.price}</p>
       </div>
@@ -29,5 +34,6 @@ const [comprarCantidad, setComprarCantidad] = useState(0);
     </div>
   );
 };
+
 
 export default ItemDetail;
