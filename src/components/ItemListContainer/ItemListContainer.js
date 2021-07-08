@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import ItemList from "../ItemList/ItemList";
+import { ItemList } from "../ItemList/ItemList";
 import "./ItemListContainer.css";
 
 const ItemListContainer = () => {
@@ -80,4 +80,4 @@ const ItemListContainer = () => {
   );
 };
 
-export default ItemListContainer;
+export { ItemListContainer };

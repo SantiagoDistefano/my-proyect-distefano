@@ -1,71 +1,75 @@
-import React, { useContext } from "react";
-import CartContext from "../../Context/CartContext";
-import Table from "react-bootstrap-table";
-import { NavLink } from "react-router-dom";
+import React, { Link, useContext } from "react";
+import { CartContext } from "../../Context/CartContext";
 
-const Cart = ({item}) => {
-  const { cart, clear, removeItem } = useContext(CartContext);
+const Cart = () => {
+  const { cart, removeItem, clear, totalQuantity, totalPrice } =
+    useContext(CartContext);
 
-  var totalCompra = cart.reduce(function (prev, cur) {
-    return prev + cur.item.price * cur.quantity;
-  }, 0);
+  const clearCart = () => {
+    clear();
+  };
+
+  const clearPartialCart = (ident) => {
+    removeItem(ident);
+  };
 
   return (
-    <div>
-      {cart.length > 0 ? (
-        <div>
-          <Table striped bordered hover>
-            <thead>
-              <tr>
-                <th>Producto</th>
-                <th>Precio Unitario</th>
-                <th>Cantidad</th>
-                <th>Total Producto</th>
-                <th>Accion</th>
-              </tr>
-            </thead>
-            <tbody>
-              {cart.map((element, item) => {
-                return (
-                  <tr>
-                    <td>{element.item.title}</td>
-                    <td>{element.item.price}</td>
-                    <td>{element.quantity}</td>
-                    <td>{element.item.price * element.quantity}</td>
-                    <td>
-                      <button
-                        
-                        onClick={() => removeItem(element.item.id)}
-                      >
-                        Eliminar
-                      </button>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </Table>
-          <div >
-            <div >
-              <button  onClick={() => clear()}>
-                Vaciar carrito
-              </button>
-            </div>
-            <div >
-              <h3>Total Compra: {totalCompra}</h3>
-            </div>
+    <div className="container">
+      <h1> Carrito de compras</h1>
+      <div>
+        {cart[0] === 0 ? (
+          <div>
+            <h3> Carrito de Compras Vacío</h3>
+            <Link to="/categorias/todos">
+              <button>Buscar Productos</button>
+            </Link>
           </div>
-        </div>
-      ) : (
-        <div>
-          <p>El carrito está vacío.</p>
-          <NavLink  exact to={"/"}>
-            Volver a la lista de productos
-          </NavLink>
-        </div>
-      )}
+        ) : (
+          <div>
+            <table className="table">
+              <thead>
+                <tr>
+                  <th scope="col">Producto</th>
+                  <th scope="col">Descripción</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col"></th>
+                </tr>
+              </thead>
+              <tbody>
+                {cart.map((pC) => {
+                  return (
+                    <tr>
+                      <td>
+                        <img src={`/public/img/${pC.items.imageURL}`} alt="Imagen de producto" />
+                      </td>
+                      <td>{pC.items.title}</td>
+                      <td>{pC.quantities} un.</td>
+                      <td>${pC.items.price}</td>
+                      <td>
+                        <button onClick={() => clearPartialCart(pC.items.id)}>
+                          X
+                        </button>
+                      </td>
+                    </tr>
+                  );
+                })}
+                <tr>
+                  <td></td>
+                  <td>TOTAL</td>
+                  <td>{totalQuantity()} un.</td>
+                  <td>$ {totalPrice()}</td>
+                  <td>
+                    <button onClick={() => clearCart()}>BORRAR CARRITO</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
     </div>
   );
 };
 
-export default Cart
+export { Cart };

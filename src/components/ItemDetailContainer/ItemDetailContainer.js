@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import ItemDetail from "../ItemDetail/ItemDetail";
+import { ItemDetail } from "../ItemDetail/ItemDetail";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
@@ -46,7 +46,7 @@ const ItemDetailContainer = () => {
       imageURL: "https://www.xenex.uy/imgs/productos/productos31_9003.jpg",
       name: "Perro golden ",
       id: "6",
-      description: "perro english springer",
+      description: "Peluche perro golden",
       price: "$700",
     },
   ];
@@ -68,4 +68,4 @@ const ItemDetailContainer = () => {
   );
 };
 
-export default ItemDetailContainer;
+export  { ItemDetailContainer } ;

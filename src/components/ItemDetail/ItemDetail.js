@@ -1,8 +1,8 @@
   import  {React, useContext, useState } from 'react'
 import './ItemDetail.css'
-import ItemCount from '../ItemCount/ItemCount'
+import { ItemCount } from '../ItemCount/ItemCount'
 import { Link } from 'react-router-dom';
-import CartContext from '../../Context/CartContext';
+import {CartContext} from '../../Context/CartContext';
 
 const ItemDetail = ({item}) => {
 
@@ -13,8 +13,6 @@ const ItemDetail = ({item}) => {
     setComprarCantidad(items);
     addItem(item, items)
   };
-
-  const context = useContext(CartContext);
 
   return (
     <div className="contenedor">
@@ -36,4 +34,4 @@ const ItemDetail = ({item}) => {
 };
 
 
-export default ItemDetail;
+export  {ItemDetail};

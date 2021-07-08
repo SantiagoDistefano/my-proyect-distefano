@@ -1,14 +1,14 @@
 import "./Main.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import NavBar from "../NavBar/NavBar";
-import ItemListContainer from "../ItemListContainer/ItemListContainer";
-import ItemDetailContainer from "../ItemDetailContainer/ItemDetailContainer";
-import CartProvider from "../../CartProvider/CartProvider";
-import Cart from "../Cart/Cart";
+import {NavBar} from "../NavBar/NavBar";
+import {ItemListContainer} from "../ItemListContainer/ItemListContainer";
+import {ItemDetailContainer} from "../ItemDetailContainer/ItemDetailContainer";
+import {CartProvider} from "../../CartProvider/CartProvider";
+import {Cart} from "../Cart/Cart";
 
 function Main() {
   return (
-    <CartProvider value={[]}>
+    <CartProvider>
       <div className="App">
         <BrowserRouter>
           <NavBar />

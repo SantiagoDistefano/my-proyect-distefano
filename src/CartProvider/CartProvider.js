@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CartContext from "../Context/CartContext"
+import {CartContext} from "../Context/CartContext";
 
 const CartProvider = ({ defaultValue = [], children }) => {
   const [cart, setCart] = useState(defaultValue);
@@ -8,12 +8,12 @@ const CartProvider = ({ defaultValue = [], children }) => {
     if (!isInCart(item.id)) {
       setCart([...cart, { item, quantity }]);
     } else {
-      let product = cart.find((x) => x.item.id == item.id);
+      let product = cart.find((x) => x.item.id === item.id);
       product.quantity += quantity;
 
       setCart(
         cart.map((item) =>
-          item.item.id == item.id
+          item.item.id === item.id
             ? { ...item.item, quantity: product.quantity }
             : item
         )
@@ -23,7 +23,7 @@ const CartProvider = ({ defaultValue = [], children }) => {
 
   const removeItem = (id) => {
     if (isInCart(id)) {
-      setCart(cart.filter((item) => item.item.id != id));
+      setCart(cart.filter((item) => item.item.id !== id));
     }
   };
 
@@ -36,16 +36,28 @@ const CartProvider = ({ defaultValue = [], children }) => {
   };
 
   const getFromCart = (id) => {
-    return cart.find((x) => x.item.id == id);
+    return cart.find((x) => x.item.id === id);
   };
+
+  const totalQuantity = () => {
+    let cartQuantity = 0;
+    cart.map(x => cartQuantity += x.quantities);
+    return cartQuantity;
+  };
+
+  const totalPrice = () => {
+    let cartPrice = 0;
+    cart.map(x => cartPrice += (x.items.price * x.quantities));
+    return cartPrice || 0;
+}
 
   return (
     <CartContext.Provider
-      value={{ cart, addItem, removeItem, clear, isInCart }}
+      value={{ cart, addItem, removeItem, clear, isInCart, totalQuantity, totalPrice }}
     >
       {children}
     </CartContext.Provider>
   );
 };
 
-export default CartProvider
+export { CartProvider };
