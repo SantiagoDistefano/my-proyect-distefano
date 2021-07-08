@@ -2,8 +2,10 @@ import React, { Link, useContext } from "react";
 import { CartContext } from "../../Context/CartContext";
 
 const Cart = () => {
-  const { cart, removeItem, clear, totalQuantity, totalPrice } =
+  const { cartState, removeItem, clear, totalQuantity, totalPrice } =
     useContext(CartContext);
+    
+    
 
   const clearCart = () => {
     clear();
@@ -17,10 +19,10 @@ const Cart = () => {
     <div className="container">
       <h1> Carrito de compras</h1>
       <div>
-        {cart[0] === 0 ? (
+        {cartState.Lenght === 0 ? (
           <div>
             <h3> Carrito de Compras Vacío</h3>
-            <Link to="/categorias/todos">
+            <Link to="/">
               <button>Buscar Productos</button>
             </Link>
           </div>
@@ -37,17 +39,17 @@ const Cart = () => {
                 </tr>
               </thead>
               <tbody>
-                {cart.map((pC) => {
+                {cartState.map((pc) => {
                   return (
                     <tr>
                       <td>
-                        <img src={`/public/img/${pC.items.imageURL}`} alt="Imagen de producto" />
+                        <img src={pc.items.imageURL} alt="Imagen de producto" />
                       </td>
-                      <td>{pC.items.title}</td>
-                      <td>{pC.quantities} un.</td>
-                      <td>${pC.items.price}</td>
+                      <td>{pc.items.title}</td>
+                      <td>{pc.quantities} un.</td>
+                      <td>${pc.items.price}</td>
                       <td>
-                        <button onClick={() => clearPartialCart(pC.items.id)}>
+                        <button onClick={() => clearPartialCart(pc.items.id)}>
                           X
                         </button>
                       </td>
