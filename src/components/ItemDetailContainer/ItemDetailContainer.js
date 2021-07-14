@@ -6,7 +6,6 @@ import { getFireStore } from "../../Factory/Firebase";
 const ItemDetailContainer = () => {
   const { id } = useParams();
   const [item, setItem] = useState([]);
-  
 
   // const info = [
   //   {
@@ -56,26 +55,28 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     const db = getFireStore();
     const itemCollection = db.collection("items");
-    const item = itemCollection.doc(id);
-    
+    const firebaseItem = itemCollection.doc(id)
 
-    item
+    firebaseItem
       .get()
-      .then((doc) => {
-        setItem({ id: doc.id, ...doc.data() });
+      .then((querySnapshot) => {
+        if (querySnapshot.size === 0) {
+          console.log("No results!");
+          return;
+        }
+        let mapFirebaseItem = querySnapshot.docs.map((doc) => doc.data());
+        setItem(mapFirebaseItem);
       })
       .catch((error) => {
         console.log("Error al obtener un item", error);
       })
-      .finally(() => {
-      });
+      .finally(() => {});
   }, [id]);
 
   return (
     <div className="Detail">
-      <ItemDetail items={item} />
+      <ItemDetail item={item} />
     </div>
   );
 };
-
 export { ItemDetailContainer };

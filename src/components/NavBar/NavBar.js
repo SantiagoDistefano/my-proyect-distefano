@@ -8,12 +8,11 @@ const NavBar = () => {
     <nav className="highNav">
       <CartWidget />
 
-      <NavLink activeClassName="Mark" className="navlink" exact to={"/"}>
+      <NavLink activeClassName="Mark" exact to={"/"}>
         <h5>Home</h5>
       </NavLink>
       <NavLink
         activeClassName="Mark"
-        className="navlink"
         exact
         to={"/category/osos"}
       >
@@ -21,7 +20,6 @@ const NavBar = () => {
       </NavLink>
       <NavLink
         activeClassName="Mark"
-        className="navlink"
         exact
         to={"/category/perros"}
       >

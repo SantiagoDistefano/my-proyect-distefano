@@ -11,12 +11,14 @@ const ItemListContainer = () => {
   useEffect(() => {
     const db = getFireStore();
     const itemCollection = db.collection("items");
+    
     let itemByCategory;
     if (category === undefined) {
       itemByCategory = itemCollection;
     } else {
       itemByCategory = itemCollection.where("category", "==", `${category}`);
     }
+    
     itemByCategory
       .get()
       .then((querySnapshot) => {
@@ -33,7 +35,7 @@ const ItemListContainer = () => {
       .catch((error) => {
         console.log("Error searching items", error);
       })
-      .finally(() => {});
+      .finally();
   }, [category]);
 
   return (

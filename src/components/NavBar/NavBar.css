@@ -1,7 +1,7 @@
 .highNav {
   overflow: hidden;
   background-color: rgb(218, 169, 97);
-  height: 60px;
+  height: 65px;
   padding: 7px;
   
 }
@@ -10,9 +10,9 @@
   float: right;
   color: black;
   text-align: center;
-  padding: 1px 9px;
+  padding: 0px 13px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
   font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
 }
 
@@ -32,11 +32,10 @@
 
 .cart{
   float: right;
-  padding: 5px;
+  padding: 19px 5px;
 }
 .Mark{
   background-color: rgb(156, 118, 60);
-  float:  right;
 }
 
 .Icon {
