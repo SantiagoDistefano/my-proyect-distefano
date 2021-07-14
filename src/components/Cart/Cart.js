@@ -1,7 +1,7 @@
 import React, { Link, useContext } from "react";
 import { CartContext } from "../../Context/CartContext";
 
-const Cart = () => {
+const Cart = (img) => {
   const { cartState, removeItem, clear, totalQuantity, totalPrice } =
     useContext(CartContext);
     

@@ -60,7 +60,7 @@ const ItemListContainer = () => {
               "https://www.xenex.uy/imgs/productos/productos31_9003.jpg",
             name: "Perro golden ",
             id: "6",
-            description: "perro golden",
+            description: "perro color dorado",
             price: "$700",
             category: "perros",
           },
