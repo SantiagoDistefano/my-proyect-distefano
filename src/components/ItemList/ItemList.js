@@ -7,11 +7,11 @@ const ItemList = (props) => {
       {props.items.map((element, e) => (
         <Item
           key={e}
-          id={element.id}
-          imageURL={element.imageURL}
-          name={element.name}
-          price={element.price}
-          description={element.description}
+          id={element.data.id}
+          imageURL={element.data.imageURL}
+          name={element.data.name}
+          price={element.data.price}
+          description={element.data.description}
         />
       ))}
     </div>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
-import { getFirestore } from "../../Factory/Firebase";
+import { getFireStore } from "../../Factory/Firebase";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
@@ -54,7 +54,7 @@ const ItemDetailContainer = () => {
   // ];
 
   useEffect(() => {
-    const db = getFirestore();
+    const db = getFireStore();
     const itemCollection = db.collection("items");
     const item = itemCollection.doc(id);
     
@@ -73,7 +73,7 @@ const ItemDetailContainer = () => {
 
   return (
     <div className="Detail">
-      <ItemDetail item={item} />
+      <ItemDetail items={item} />
     </div>
   );
 };
