@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ItemList } from "../ItemList/ItemList";
 import "./ItemListContainer.css";
-import { getFireStore } from "../../Factory/Firebase";
+import { getFireStore } from "../../Factory/Firebase/index";
 
 const ItemListContainer = () => {
   const [items, setItems] = useState([]);
@@ -25,12 +25,10 @@ const ItemListContainer = () => {
         if (querySnapshot.size === 0) {
           console.log("No results!");
         }
-        setItems(
-          querySnapshot.docs.map((doc) => ({
-            data: doc.data(),
-            id: doc.id,
-          }))
-        );
+
+        let aux = []
+        querySnapshot.docs.map(doc => aux.push({id: doc.id, ...doc.data() }))
+        setItems(aux);
       })
       .catch((error) => {
         console.log("Error searching items", error);

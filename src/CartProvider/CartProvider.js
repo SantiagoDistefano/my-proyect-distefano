@@ -1,18 +1,19 @@
-import React, { useState } from "react";
+import  {React, useState } from "react";
 import {CartContext} from "../Context/CartContext";
 
+
 const CartProvider = ({ defaultValue = [], children }) => {
-  const [cartState, setCartState] = useState(defaultValue);
+  const [cart, setCart] = useState(defaultValue);
 
   const addItem = (item, quantity) => {
     if (!isInCart(item.id)) {
-      setCartState([...cartState, { item, quantity }]);
+      setCart([...cart, { item, quantity }]);
     } else {
-      let product = cartState.find((x) => x.item.id === item.id);
+      let product = cart.find((x) => x.item.id === item.id);
       product.quantity += quantity;
 
-      setCartState(
-        cartState.map((item) =>
+      setCart(
+        cart.map((item) =>
           item.item.id === item.id
             ? { ...item.item, quantity: product.quantity }
             : item
@@ -23,12 +24,12 @@ const CartProvider = ({ defaultValue = [], children }) => {
 
   const removeItem = (id) => {
     if (isInCart(id)) {
-      setCartState(cartState.filter((item) => item.item.id !== id));
+      setCart(cart.filter((item) => item.item.id !== id));
     }
   };
 
   const clear = () => {
-    setCartState([]);
+    setCart([]);
   };
 
   const isInCart = (id) => {
@@ -36,24 +37,24 @@ const CartProvider = ({ defaultValue = [], children }) => {
   };
 
   const getFromCart = (id) => {
-    return cartState.find((x) => x.item.id === id);
+    return cart.find((x) => x.item.id === id);
   };
 
   const totalQuantity = () => {
     let cartQuantity = 0;
-    cartState.map(x => cartQuantity += x.quantities);
+    cart.map(x => cartQuantity += x.item.quantity);
     return cartQuantity;
   };
 
   const totalPrice = () => {
     let cartPrice = 0;
-    cartState.map(x => cartPrice += (x.items.price * x.quantities));
-    return cartPrice || 0;
+    cart.map(x => cartPrice += (x.item.items.price * x.quantity));
+    return cartPrice;
 }
 
   return (
     <CartContext.Provider
-      value={{ cartState, addItem, removeItem, clear, isInCart, totalQuantity, totalPrice }}
+      value={{ cart, addItem, removeItem, clear, totalQuantity, isInCart, totalPrice }}
     >
       {children}
     </CartContext.Provider>

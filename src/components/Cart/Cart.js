@@ -1,15 +1,17 @@
 import React, { Link, useContext } from "react";
+import { NavLink } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
+import "./Cart.css";
 
 const Cart = () => {
-  const { cartState, removeItem, clear, totalQuantity, totalPrice } =
+  const { cart, removeItem, clear, totalQuantity, totalPrice, cartSize } =
     useContext(CartContext);
-    
-    
 
   const clearCart = () => {
     clear();
   };
+
+  console.log(cart)
 
   const clearPartialCart = (ident) => {
     removeItem(ident);
@@ -17,9 +19,9 @@ const Cart = () => {
 
   return (
     <div className="container">
-      <h1> Carrito de compras</h1>
+      <h1> Carrito de compras 🛒</h1>
       <div>
-        {cartState.Lenght === 0 ? (
+        {cartSize === 0 ? (
           <div>
             <h3> Carrito de Compras Vacío</h3>
             <Link to="/">
@@ -27,46 +29,71 @@ const Cart = () => {
             </Link>
           </div>
         ) : (
-          <div>
+          <div className="container-table">
             <table className="table">
               <thead>
                 <tr>
-                  <th scope="col">Producto</th>
-                  <th scope="col">Descripción</th>
-                  <th scope="col">Cantidad</th>
-                  <th scope="col">Precio</th>
-                  <th scope="col"></th>
+                  <th className="col">Producto</th>
+                  <th className="col">Descripción</th>
+                  <th className="col">Cantidad</th>
+                  <th className="col">Precio</th>
+                  <th className="col"></th>
                 </tr>
               </thead>
               <tbody>
-                {cartState.map((pc) => {
+                {cart.map((element) => {
                   return (
                     <tr>
                       <td>
-                        <img src={pc.items.imageURL} alt="Imagen de producto" />
+                        <img
+                          src={element.item.items.imageURL}
+                          alt="Imagen de producto"
+                          className="prod-img"
+                        />
                       </td>
-                      <td>{pc.items.title}</td>
-                      <td>{pc.quantities} un.</td>
-                      <td>${pc.items.price}</td>
+                      <td>{element.item.items.name}</td>
+                      <td>{element.item.quantities} un.</td>
+                      <td>${element.item.items.price}</td>
                       <td>
-                        <button onClick={() => clearPartialCart(pc.items.id)}>
-                          X
+                        <button
+                          onClick={() =>
+                            clearPartialCart(element.item.items.id)
+                          }
+                          className="btn-clearID"
+                        >
+                          🗑️
                         </button>
                       </td>
                     </tr>
                   );
                 })}
+
                 <tr>
                   <td></td>
                   <td>TOTAL</td>
                   <td>{totalQuantity()} un.</td>
                   <td>$ {totalPrice()}</td>
                   <td>
-                    <button onClick={() => clearCart()}>BORRAR CARRITO</button>
+                    <button
+                      onClick={() => clearCart()}
+                      className="btn-ClearCart"
+                    >
+                      <b>Vaciar Carrito</b>
+                    </button>
                   </td>
                 </tr>
               </tbody>
             </table>
+            <NavLink exact to={"/finishOrder"}>
+              <button className="btn-FinishOrder">
+                <b>Terminar mi compra </b>
+              </button>
+            </NavLink>
+            <NavLink exact to={"/"}>
+              <button className="btn-FollowingShopping">
+                <b>Seguir comprando</b>
+              </button>
+            </NavLink>
           </div>
         )}
       </div>

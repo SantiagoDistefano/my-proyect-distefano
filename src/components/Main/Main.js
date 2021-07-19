@@ -5,6 +5,7 @@ import {ItemListContainer} from "../ItemListContainer/ItemListContainer";
 import {ItemDetailContainer} from "../ItemDetailContainer/ItemDetailContainer";
 import {CartProvider} from "../../CartProvider/CartProvider";
 import {Cart} from "../Cart/Cart";
+import { FinishOrder } from "../FinishOrder/FinishOrder";
 
 function Main() {
   return (
@@ -25,6 +26,9 @@ function Main() {
             <Route exact path="/cart">
               <Cart />
             </Route>
+            <Route exact path="/FinishOrder">
+              <FinishOrder/>
+            </Route>
           </Switch>
         </BrowserRouter>
       </div>
@@ -32,4 +36,4 @@ function Main() {
   );
 }
 
-export default Main;
+export {Main};

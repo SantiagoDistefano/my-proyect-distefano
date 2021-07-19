@@ -3,6 +3,7 @@
     padding: 0;
     border: 0; 
     background-color: white;
+    font-size: 25px;
 }
 
 
@@ -12,9 +13,12 @@
 }
 
 .AddCart {
-    background-color: white;
-    border-color: rgba(0, 140, 255, 0.87);
     margin-top: 12px;
-    text-decoration: none;
+    background-color:  rgb(218, 169, 97);
+    border-color: rgb(218, 169, 97);
+    font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
     color: black;
+    text-decoration: none;
+    margin: 12px;
+    cursor: pointer;
 }
