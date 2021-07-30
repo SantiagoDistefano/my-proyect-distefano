@@ -6,7 +6,7 @@ import { getFireStore } from "../../Factory/Firebase/index";
 import "./FinishOrder.css"
 
 const FinishOrder = () => {
-  const { cart, totalPrice } = useContext(CartContext);
+  const { cart, cartTotalAmount } = useContext(CartContext);
 
   const [buyer, setBuyer] = useState({
     name: "",
@@ -28,7 +28,7 @@ const FinishOrder = () => {
       buyer: buyer,
       items: cart,
       date: firebase.firestore.Timestamp.fromDate(new Date()),
-      total: totalPrice,
+      total: cartTotalAmount,
     };
 
     orders

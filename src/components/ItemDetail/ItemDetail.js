@@ -5,16 +5,15 @@ import { Link } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
 
 const ItemDetail = (item) => {
-
   const [comprarCantidad, setComprarCantidad] = useState(0);
   const { addItem } = useContext(CartContext);
-  
-  
 
-  const onAdd = (items) => {
-    setComprarCantidad(items);
-    addItem(item, items);
+  const onAdd = (amount) => {
+    setComprarCantidad(amount);
+    addItem({ item, amount });
+    console.log(amount)
   };
+
   
   return (
     <div className="contenedor">

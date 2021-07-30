@@ -1,60 +1,65 @@
-import  {React, useState } from "react";
-import {CartContext} from "../Context/CartContext";
-
+import { React, useState } from "react";
+import { CartContext } from "../Context/CartContext";
 
 const CartProvider = ({ defaultValue = [], children }) => {
   const [cart, setCart] = useState(defaultValue);
+  const [cartTotalAmount, setCartTotalAmount] = useState(0);
 
-  const addItem = (item, quantity) => {
-    if (!isInCart(item.id)) {
-      setCart([...cart, { item, quantity }]);
-    } else {
-      let product = cart.find((x) => x.item.id === item.id);
-      product.quantity += quantity;
 
-      setCart(
-        cart.map((item) =>
-          item.item.id === item.id
-            ? { ...item.item, quantity: product.quantity }
-            : item
-        )
-      );
-    }
-  };
-
-  const removeItem = (id) => {
-    if (isInCart(id)) {
-      setCart(cart.filter((item) => item.item.id !== id));
-    }
-  };
-
-  const clear = () => {
-    setCart([]);
-  };
-
-  const isInCart = (id) => {
-    return getFromCart(id);
-  };
 
   const getFromCart = (id) => {
     return cart.find((x) => x.item.id === id);
   };
 
-  const totalQuantity = () => {
-    let cartQuantity = 0;
-    cart.map(x => cartQuantity += x.item.quantity);
-    return cartQuantity;
+  const isInCart = (id) => {
+    return id === undefined ? undefined : getFromCart(id) !== undefined;
   };
 
-  const totalPrice = () => {
-    let cartPrice = 0;
-    cart.map(x => cartPrice += (x.item.items.price * x.quantity));
-    return cartPrice;
-}
+  const substractAmount = (id) => {
+    var unitPrice = cart.filter((x) => x.item.id === id);
+    var amounToSubstract = unitPrice[0].item.price * unitPrice[0].amount;
+    setCartTotalAmount(cartTotalAmount - amounToSubstract);
+  };
+
+  const addItem = (obj) => {
+    if (isInCart(obj.item)) {
+      cart.map((x) => increaseQuantity(x, obj));
+      var amountToIncreaseInUse = obj.amount * obj.item.price;
+      setCartTotalAmount(cartTotalAmount + amountToIncreaseInUse);
+      return;
+    }
+    var amountToIncrease = obj.amount * obj.item.price;
+    setCart([...cart, obj]);
+    setCartTotalAmount(cartTotalAmount + amountToIncrease);
+  }
+
+  const removeItem = (id) => {
+    substractAmount(id);
+    var newCart = cart.filter((x) => x.item.id !== id);
+    setCart(newCart);
+  };
+
+  const clear = () => {
+    setCart(defaultValue);
+  };
+
+  function increaseQuantity(x, obj) {
+    if (x.item.id === obj.item.id) {
+      x.amount = x.amount + obj.amount;
+    }
+  }
 
   return (
     <CartContext.Provider
-      value={{ cart, addItem, removeItem, clear, totalQuantity, isInCart, totalPrice }}
+      value={{
+        cart,
+        addItem,
+        removeItem,
+        clear,
+        isInCart,
+        cartTotalAmount,
+        cartSize: cart.length,
+      }}
     >
       {children}
     </CartContext.Provider>

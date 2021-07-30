@@ -16,12 +16,6 @@
   font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
 }
 
-
-/* .highNav a.active {
-  background-color: darkgray;
-  color: white;
-} */
-
 .nombreTienda {
   margin: 0;
   padding-block-start: 5px;
@@ -33,6 +27,7 @@
 .cart{
   float: right;
   padding: 19px 5px;
+  padding-right: 0;
 }
 .Mark{
   background-color: rgb(156, 118, 60);

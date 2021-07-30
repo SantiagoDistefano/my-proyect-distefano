@@ -34,6 +34,7 @@
     background-color:  rgb(218, 169, 97);
     border-color: rgb(218, 169, 97);
     font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
+    cursor: pointer;
     
 }
 
@@ -59,5 +60,13 @@
 
 .item {
     border: 3px grey;
+}
+
+.name {
+    font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
+}
+
+.btn-home {
+    text-decoration: none;
 }
 
