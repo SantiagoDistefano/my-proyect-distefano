@@ -1,10 +1,10 @@
 import "./Main.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import {NavBar} from "../NavBar/NavBar";
-import {ItemListContainer} from "../ItemListContainer/ItemListContainer";
-import {ItemDetailContainer} from "../ItemDetailContainer/ItemDetailContainer";
-import {CartProvider} from "../../CartProvider/CartProvider";
-import {Cart} from "../Cart/Cart";
+import { NavBar } from "../NavBar/NavBar";
+import { ItemListContainer } from "../ItemListContainer/ItemListContainer";
+import { ItemDetailContainer } from "../ItemDetailContainer/ItemDetailContainer";
+import { CartProvider } from "../../CartProvider/CartProvider";
+import { Cart } from "../Cart/Cart";
 import { FinishOrder } from "../FinishOrder/FinishOrder";
 
 function Main() {
@@ -27,7 +27,7 @@ function Main() {
               <Cart />
             </Route>
             <Route exact path="/FinishOrder">
-              <FinishOrder/>
+              <FinishOrder />
             </Route>
           </Switch>
         </BrowserRouter>
@@ -36,4 +36,4 @@ function Main() {
   );
 }
 
-export {Main};
+export { Main };

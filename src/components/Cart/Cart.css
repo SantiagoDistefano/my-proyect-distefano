@@ -1,72 +1,68 @@
 .table {
-    align-items: center;
-    width:400px;
-    height:350px;
-    border-style: groove;
-    border-color: rgba(218, 170, 97, 0.952);
-    background-color: white;
-    margin-right: 500px;
-    margin-left: 500px;
-    margin-top: 150px;
-    font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
-    column-rule-color: black;
+  align-items: center;
+  width: 400px;
+  height: 350px;
+  border-style: groove;
+  border-color: rgba(218, 170, 97, 0.952);
+  background-color: white;
+  margin-right: 500px;
+  margin-left: 500px;
+  margin-top: 150px;
+  font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
+  column-rule-color: black;
 }
 
-
-
 .prod-img {
-    width: 150px;
-    height: 150px;
+  width: 150px;
+  height: 150px;
 }
 
 .col {
-    padding: 0px 60px;
-    color: black;
+  padding: 0px 60px;
+  color: black;
 }
 
 .btn-clearID {
-    background-color: white;
-    border: 0;
-    cursor: pointer;
+  background-color: white;
+  border: 0;
+  cursor: pointer;
 }
 
 .btn-ClearCart {
-    background-color:  rgb(218, 169, 97);
-    border-color: rgb(218, 169, 97);
-    font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
-    cursor: pointer;
-    
+  background-color: rgb(218, 169, 97);
+  border-color: rgb(218, 169, 97);
+  font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
+  cursor: pointer;
 }
 
 .btn-FinishOrder {
-    background-color:  rgb(218, 169, 97);
-    border-color: rgb(218, 169, 97);
-    font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
-    color: black;
-    text-decoration: none;
-    margin: 12px;
-    cursor: pointer;
+  background-color: rgb(218, 169, 97);
+  border-color: rgb(218, 169, 97);
+  font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
+  color: black;
+  text-decoration: none;
+  margin: 12px;
+  cursor: pointer;
 }
 
 .btn-FollowingShopping {
-    background-color:  rgb(218, 169, 97);
-    border-color: rgb(218, 169, 97);
-    font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
-    color: black;
-    text-decoration: none;
-    margin: 12px;
-    cursor: pointer;
+  background-color: rgb(218, 169, 97);
+  border-color: rgb(218, 169, 97);
+  font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
+  color: black;
+  text-decoration: none;
+  margin: 12px;
+  cursor: pointer;
 }
 
 .item {
-    border: 3px grey;
+  border: 3px grey;
 }
 
 .name {
-    font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
+  font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
 }
 
 .btn-home {
-    text-decoration: none;
+  text-decoration: none;
 }
-

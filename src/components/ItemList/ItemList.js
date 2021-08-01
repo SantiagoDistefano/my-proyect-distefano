@@ -1,8 +1,7 @@
-import {React} from "react";
+import { React } from "react";
 import { Item } from "../Item/Item";
 
 const ItemList = (props) => {
-
   return (
     <div>
       {props.items.map((element, e) => (

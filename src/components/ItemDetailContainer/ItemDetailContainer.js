@@ -1,4 +1,4 @@
-import  {React, useState, useEffect } from "react";
+import { React, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "../ItemDetail/ItemDetail";
 import { getFireStore } from "../../Factory/Firebase";
@@ -6,7 +6,6 @@ import { getFireStore } from "../../Factory/Firebase";
 const ItemDetailContainer = () => {
   const { id } = useParams();
   const [item, setItem] = useState([]);
-
 
   useEffect(() => {
     const db = getFireStore();

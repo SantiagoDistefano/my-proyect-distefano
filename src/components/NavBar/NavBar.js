@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink, Link } from "react-router-dom";
 import "./NavBar.css";
-import {CartWidget} from "../CartWidget/CartWidget";
+import { CartWidget } from "../CartWidget/CartWidget";
 
 const NavBar = () => {
   return (
@@ -11,18 +11,10 @@ const NavBar = () => {
       <NavLink activeClassName="Mark" exact to={"/"}>
         <h5>Home</h5>
       </NavLink>
-      <NavLink
-        activeClassName="Mark"
-        exact
-        to={"/category/osos"}
-      >
+      <NavLink activeClassName="Mark" exact to={"/category/osos"}>
         <h5>Osos</h5>
       </NavLink>
-      <NavLink
-        activeClassName="Mark"
-        exact
-        to={"/category/perros"}
-      >
+      <NavLink activeClassName="Mark" exact to={"/category/perros"}>
         <h5>Perros</h5>
       </NavLink>
       <img

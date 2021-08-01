@@ -4,13 +4,12 @@ import { CartContext } from "../../Context/CartContext";
 import "./Cart.css";
 
 const Cart = () => {
-  const { cart, removeItem, clear, cartTotalAmount, cartSize } =
+  const { cart, removeItem, clear, cartSize, cartTotalAmount } =
     useContext(CartContext);
-
   console.log(cart);
 
   return (
-    <div className="m-3">
+    <div>
       <h1>CARRITO DE COMPRAS 🛒 </h1>
 
       {cartSize === 0 && (
@@ -26,67 +25,66 @@ const Cart = () => {
 
       {cartSize !== 0 && (
         <div>
-          <div>
-            <div>
-              <table className="table">
-                <thead>
+          <table className="table">
+            <thead>
+              <tr>
+                <th className="col">Producto</th>
+                <th className="col">Descripción</th>
+                <th className="col">Cantidad</th>
+                <th className="col">Precio</th>
+                <th className="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              {cart.map((element) => {
+                return (
                   <tr>
-                    <th className="col">Producto</th>
-                    <th className="col">Descripción</th>
-                    <th className="col">Cantidad</th>
-                    <th className="col">Precio</th>
-                    <th className="col"></th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {cart.map((element) => {
-                    return (
-                      <tr>
-                        <td>
-                          <img
-                            src={element.item.items.imageURL}
-                            alt="Imagen de producto"
-                            className="prod-img"
-                          />
-                        </td>
-                        <td>{element.item.items.name}</td>
-                        <td>{element.item.amount} un.</td>
-                        <td>${element.item.items.price}</td>
-                        <td>
-                          <button
-                            onClick={() => removeItem()}
-                            className="btn-clearID"
-                          >
-                            🗑️
-                          </button>
-                        </td>
-                      </tr>
-                    );
-                  })}
-
-                  <tr>
-                    <td></td>
                     <td>
-                      <hr />
-                      TOTAL
+                      <img
+                        src={element.item.items.imageURL}
+                        alt="Imagen de producto"
+                        className="prod-img"
+                      />
                     </td>
+                    <td>{element.item.items.name}</td>
+                    <td>{element.item.amount} un.</td>
+                    <td>${element.item.items.price}</td>
                     <td>
-                      <hr />
-                      {cartTotalAmount} un.
-                    </td>
-                    <td>
-                      <hr />$ {cartTotalAmount}
-                    </td>
-                    <td>
-                      <button onClick={() => clear()} className="btn-ClearCart">
-                        <b>Vaciar Carrito</b>
+                      <button
+                        onClick={() => removeItem()}
+                        className="btn-clearID"
+                      >
+                        🗑️
                       </button>
                     </td>
                   </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+                );
+              })}
+
+              <tr>
+                <td></td>
+                <td>
+                  <hr />
+                  TOTAL
+                </td>
+
+                <td>
+                  <hr />
+                  {cartTotalAmount} un.
+                </td>
+                <td>
+                  <hr />$ {}
+                </td>
+
+                <td>
+                  <button onClick={() => clear()} className="btn-ClearCart">
+                    <b>Vaciar Carrito</b>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
           <NavLink exact to={"/finishOrder"}>
             <button className="btn-FinishOrder">
               <b>Terminar mi compra </b>

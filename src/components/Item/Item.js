@@ -1,4 +1,4 @@
-import {React} from "react";
+import { React } from "react";
 import { Link } from "react-router-dom";
 
 import "./Item.css";
@@ -13,7 +13,7 @@ const Item = (props) => {
       <h5>
         <b>${props.price}</b>
       </h5>
-      
+
       <Link to={`/item/${props.id}`} className="Link">
         <h6 className="addCart">Agregar al carrito</h6>
       </Link>

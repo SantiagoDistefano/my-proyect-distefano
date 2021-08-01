@@ -1,35 +1,32 @@
 .info {
-    text-align: center;
-    float: left;
-    align-content: center;
-    padding: 30px;
-    padding-bottom: 0;
-    font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
-    background-color: white;
-    margin: 15px;
-    border: 9px groove rgba(196, 159, 104, 0.795);
-    border-radius: 15px;
-    
+  text-align: center;
+  float: left;
+  align-content: center;
+  padding: 30px;
+  padding-bottom: 0;
+  font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
+  background-color: white;
+  margin: 15px;
+  border: 9px groove rgba(196, 159, 104, 0.795);
+  border-radius: 15px;
 }
 
 .info:hover {
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
-
 .addCart {
-    background-color: rgba(196, 159, 104, 0.795);
-    color: black;
-    margin-bottom: 7px;
-    font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
-    text-align: center;
-    padding: 11px 1px ;
-    cursor: pointer;
-    
+  background-color: rgba(196, 159, 104, 0.795);
+  color: black;
+  margin-bottom: 7px;
+  font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
+  text-align: center;
+  padding: 11px 1px;
+  cursor: pointer;
 }
 
 .Link {
-    text-decoration: none;
+  text-decoration: none;
 }

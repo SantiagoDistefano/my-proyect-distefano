@@ -1,33 +1,31 @@
 .AddCart {
-    background-color: white;
-    border-color: rgba(0, 140, 255, 0.87);
-    margin-top: 12px;
-    text-decoration: none;
-    color: black;
+  background-color: white;
+  border-color: rgba(0, 140, 255, 0.87);
+  margin-top: 12px;
+  text-decoration: none;
+  color: black;
 }
 
-
 .contenedor {
-    text-align: center;
-    align-content: center;
-    padding: 30px;
-    font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
-    background-color: white;
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 30px;
-    border: 10px;
-    border-style: groove;
-    border-color: rgba(196, 159, 104, 0.795);
-
+  text-align: center;
+  align-content: center;
+  padding: 30px;
+  font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
+  background-color: white;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 30px;
+  border: 10px;
+  border-style: groove;
+  border-color: rgba(196, 159, 104, 0.795);
 }
 
 .imgDetail {
-    width: auto;
-    height: auto;
-    max-width: 50%;
+  width: auto;
+  height: auto;
+  max-width: 50%;
 }
 
 .Counter {
-    float: right;
+  float: right;
 }

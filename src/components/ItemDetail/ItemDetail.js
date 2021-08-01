@@ -11,10 +11,8 @@ const ItemDetail = (item) => {
   const onAdd = (amount) => {
     setComprarCantidad(amount);
     addItem({ item, amount });
-    console.log(amount)
   };
 
-  
   return (
     <div className="contenedor">
       <div className="Map">

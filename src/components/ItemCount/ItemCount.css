@@ -1,24 +1,22 @@
-
 .icon {
-    padding: 0;
-    border: 0; 
-    background-color: white;
-    font-size: 25px;
+  padding: 0;
+  border: 0;
+  background-color: white;
+  font-size: 25px;
 }
 
-
 .items {
-    padding-left: 50px;
-    padding-right: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .AddCart {
-    margin-top: 12px;
-    background-color:  rgb(218, 169, 97);
-    border-color: rgb(218, 169, 97);
-    font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
-    color: black;
-    text-decoration: none;
-    margin: 12px;
-    cursor: pointer;
+  margin-top: 12px;
+  background-color: rgb(218, 169, 97);
+  border-color: rgb(218, 169, 97);
+  font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
+  color: black;
+  text-decoration: none;
+  margin: 12px;
+  cursor: pointer;
 }

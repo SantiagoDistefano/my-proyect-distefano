@@ -3,7 +3,7 @@ import { CartContext } from "../../Context/CartContext";
 import firebase from "firebase/app";
 import "@firebase/firestore";
 import { getFireStore } from "../../Factory/Firebase/index";
-import "./FinishOrder.css"
+import "./FinishOrder.css";
 
 const FinishOrder = () => {
   const { cart, cartTotalAmount } = useContext(CartContext);

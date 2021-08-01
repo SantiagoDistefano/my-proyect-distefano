@@ -3,7 +3,6 @@
   background-color: rgb(218, 169, 97);
   height: 65px;
   padding: 7px;
-  
 }
 
 .highNav a {
@@ -13,7 +12,7 @@
   padding: 0px 13px;
   text-decoration: none;
   font-size: 20px;
-  font-family: Rockwell Extra Bold,Rockwell Bold,monospace;
+  font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
 }
 
 .nombreTienda {
@@ -23,13 +22,12 @@
   float: left;
 }
 
-
-.cart{
+.cart {
   float: right;
   padding: 19px 5px;
   padding-right: 0;
 }
-.Mark{
+.Mark {
   background-color: rgb(156, 118, 60);
 }
 

@@ -5,22 +5,6 @@ const CartProvider = ({ defaultValue = [], children }) => {
   const [cart, setCart] = useState(defaultValue);
   const [cartTotalAmount, setCartTotalAmount] = useState(0);
 
-
-
-  const getFromCart = (id) => {
-    return cart.find((x) => x.item.id === id);
-  };
-
-  const isInCart = (id) => {
-    return id === undefined ? undefined : getFromCart(id) !== undefined;
-  };
-
-  const substractAmount = (id) => {
-    var unitPrice = cart.filter((x) => x.item.id === id);
-    var amounToSubstract = unitPrice[0].item.price * unitPrice[0].amount;
-    setCartTotalAmount(cartTotalAmount - amounToSubstract);
-  };
-
   const addItem = (obj) => {
     if (isInCart(obj.item)) {
       cart.map((x) => increaseQuantity(x, obj));
@@ -31,7 +15,11 @@ const CartProvider = ({ defaultValue = [], children }) => {
     var amountToIncrease = obj.amount * obj.item.price;
     setCart([...cart, obj]);
     setCartTotalAmount(cartTotalAmount + amountToIncrease);
-  }
+  };
+
+  const isInCart = (id) => {
+    return id === undefined ? undefined : getFromCart(id) !== undefined;
+  };
 
   const removeItem = (id) => {
     substractAmount(id);
@@ -43,11 +31,21 @@ const CartProvider = ({ defaultValue = [], children }) => {
     setCart(defaultValue);
   };
 
+  const getFromCart = (id) => {
+    return cart.find((x) => x.item.id === id);
+  };
+
   function increaseQuantity(x, obj) {
     if (x.item.id === obj.item.id) {
       x.amount = x.amount + obj.amount;
     }
   }
+
+  const substractAmount = (id) => {
+    var unitPrice = cart.filter((x) => x.item.id === id);
+    var amounToSubstract = unitPrice[0].item.price * unitPrice[0].amount;
+    setCartTotalAmount(cartTotalAmount - amounToSubstract);
+  };
 
   return (
     <CartContext.Provider
@@ -56,7 +54,6 @@ const CartProvider = ({ defaultValue = [], children }) => {
         addItem,
         removeItem,
         clear,
-        isInCart,
         cartTotalAmount,
         cartSize: cart.length,
       }}
