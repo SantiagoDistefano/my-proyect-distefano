@@ -26,4 +26,5 @@ Este proyecto se esta llevando acabo en el curso de react en Coder House
 
 ## GIF de navegabilidad de la aplicación
 
-![gif-proyect-final](https://user-images.githubusercontent.com/84357398/127789572-9575adcb-5f05-433c-b478-bbc9f7aa4bfd.gif)
+![gif-proyect-final2](https://user-images.githubusercontent.com/84357398/127902081-29aa7f3b-30b4-42be-8b07-025985458f78.gif)
+
