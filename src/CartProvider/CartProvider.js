@@ -34,7 +34,7 @@ const CartProvider = ({ defaultValue = [], children }) => {
   function getTotalPrice() {
     let totalPrice = 0;
     cart.map((item) => {
-      totalPrice += item.amount * item.item.items.price;
+      return (totalPrice += item.amount * item.item.items.price);
     });
     return totalPrice;
   }
