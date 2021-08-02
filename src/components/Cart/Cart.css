@@ -33,6 +33,7 @@
   border-color: rgb(218, 169, 97);
   font-family: Rockwell Extra Bold, Rockwell Bold, monospace;
   cursor: pointer;
+  margin-left: 5px;
 }
 
 .btn-FinishOrder {

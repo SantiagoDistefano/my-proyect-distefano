@@ -26,7 +26,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
       <button
         type="button"
         className="AddCart"
-        onClick={(x) => onAdd(x, items)}
+        onClick={() => onAdd(items)}
       >
         Agregar al Carrito
       </button>

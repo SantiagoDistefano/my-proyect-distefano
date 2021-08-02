@@ -4,9 +4,8 @@ import { CartContext } from "../../Context/CartContext";
 import "./Cart.css";
 
 const Cart = () => {
-  const { cart, removeItem, clear, cartSize, cartTotalAmount } =
+  const { cart, removeItem, clear, cartSize, getTotalPrice } =
     useContext(CartContext);
-  console.log(cart);
 
   return (
     <div>
@@ -31,7 +30,8 @@ const Cart = () => {
                 <th className="col">Producto</th>
                 <th className="col">Descripción</th>
                 <th className="col">Cantidad</th>
-                <th className="col">Precio</th>
+                <th className="col">Precio Unitario</th>
+                <th className="col">Subtotal</th>
                 <th className="col"></th>
               </tr>
             </thead>
@@ -47,8 +47,9 @@ const Cart = () => {
                       />
                     </td>
                     <td>{element.item.items.name}</td>
-                    <td>{element.item.amount} un.</td>
+                    <td>{element.amount} un.</td>
                     <td>${element.item.items.price}</td>
+                    <td>${element.amount * element.item.items.price}</td>
                     <td>
                       <button
                         onClick={() => removeItem()}
@@ -60,22 +61,16 @@ const Cart = () => {
                   </tr>
                 );
               })}
-
               <tr>
-                <td></td>
-                <td>
+                <td colSpan="4">
                   <hr />
-                  TOTAL
+                  <b>TOTAL</b>
                 </td>
 
                 <td>
                   <hr />
-                  {cartTotalAmount} un.
+                  <b>${getTotalPrice()}</b>
                 </td>
-                <td>
-                  <hr />$ {}
-                </td>
-
                 <td>
                   <button onClick={() => clear()} className="btn-ClearCart">
                     <b>Vaciar Carrito</b>
@@ -84,7 +79,6 @@ const Cart = () => {
               </tr>
             </tbody>
           </table>
-
           <NavLink exact to={"/finishOrder"}>
             <button className="btn-FinishOrder">
               <b>Terminar mi compra </b>
