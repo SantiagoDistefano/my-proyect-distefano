@@ -19,11 +19,11 @@ Este proyecto se esta llevando acabo en el curso de react en Coder House
 
 ## Dependencias
 
-1. firebase 8.0.2
-2. bootstrap 5.0.2
-3. react 17.0.2
-4. react-router-dom 5.2.0
+1. firebase (8.0.2)
+2. bootstrap (5.0.2)
+3. react (17.0.2)
+4. react-router-dom (5.2.0)
 
-## GIF de la primera entrega del proyecto final
+## GIF de navegabilidad de la aplicación
 
-![gif-proyect](https://user-images.githubusercontent.com/84357398/123187209-1180a000-d470-11eb-96c0-b4f061eebfca.gif)
+![gif-proyect-final](https://user-images.githubusercontent.com/84357398/127789572-9575adcb-5f05-433c-b478-bbc9f7aa4bfd.gif)
