@@ -85,7 +85,7 @@ const FinishOrder = () => {
           className="btn-enviar"
           onClick={() => onClickOrder()}
         >
-          Enviar
+          Enviar Pedido
         </button>
       </form>
     </div>
