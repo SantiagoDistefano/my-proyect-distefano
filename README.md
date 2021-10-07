@@ -24,6 +24,10 @@ Este proyecto se esta llevando acabo en el curso de react en Coder House
 3. react (17.0.2)
 4. react-router-dom (5.2.0)
 
+## Link de la pagina web
+
+https://peluchin.netlify.app/
+
 ## GIF de navegabilidad de la aplicación
 
 ![gif-proyect-final2](https://user-images.githubusercontent.com/84357398/127902081-29aa7f3b-30b4-42be-8b07-025985458f78.gif)
