@@ -4,6 +4,9 @@ import { CartContext } from "../Context/CartContext";
 const CartProvider = ({ defaultValue = [], children }) => {
   const [cart, setCart] = useState(defaultValue);
 
+
+console.log(cart)
+
   const addItem = (obj) => {
     if (isInCart(obj.item)) {
       cart.map((x) => increaseQuantity(x, obj));
@@ -17,7 +20,7 @@ const CartProvider = ({ defaultValue = [], children }) => {
   };
 
   const removeItem = (id) => {
-    var newCart = cart.filter((x) => x.item.id !== id);
+    var newCart = cart.filter((x) => x.item.items.id !== id);
     setCart(newCart);
   };
 

@@ -1,4 +1,5 @@
 import { React, useState, useContext } from "react";
+import { Link } from "react-router-dom";
 import { CartContext } from "../../Context/CartContext";
 import firebase from "firebase/app";
 import "@firebase/firestore";
@@ -80,6 +81,7 @@ const FinishOrder = () => {
             onChange={InputChange}
           />
         </div>
+        <Link to="/">
         <button
           type="enviar"
           className="btn-enviar"
@@ -87,6 +89,7 @@ const FinishOrder = () => {
         >
           Enviar Pedido
         </button>
+        </Link>
       </form>
     </div>
   );
